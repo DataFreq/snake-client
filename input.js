@@ -15,17 +15,22 @@ const handleUserInput = key => {
     process.exit();
 
   if (key.match('w') || key.match('W'))
-    connection.write('Move: up')
+    connection.write('Move: up');
 
   if (key.match('a') || key.match('A'))
-    connection.write('Move: left')
+    connection.write('Move: left');
 
   if (key.match('s') || key.match('S'))
-    connection.write('Move: down')
+    connection.write('Move: down');
     
   if (key.match('d') || key.match('D'))
-    connection.write('Move: right')
+    connection.write('Move: right');
 
+  if (key.match('1'))
+    connection.write('Say: 4c 4f 4c');
+
+  if (key.match('2'))
+    connection.write('Say: >:)');
 };
 
 module.exports = setupInput;

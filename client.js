@@ -9,7 +9,21 @@ const connect = () => {
   conn.setEncoding('utf8');
 
   conn.on('connect', () => {
+
     conn.write('Name: Neo');
+
+    setTimeout(() => {
+      conn.write('Move: up')
+    },500)
+
+    setTimeout(() => {
+      conn.write('Move: right')
+    },1000)
+
+    setInterval(() => {
+      conn.write('Move: right')
+    },50)
+
   });
 
   conn.on('data', (data) => {
